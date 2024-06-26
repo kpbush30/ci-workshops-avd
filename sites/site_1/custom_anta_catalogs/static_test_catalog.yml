@@ -1,0 +1,17 @@
+anta.tests.software:
+  - VerifyEOSVersion: # Verifies the device is running one of the allowed EOS version.
+      versions:       # List of allowed EOS versions.
+        - 4.32.0F
+  - VerifyTerminAttrVersion:
+      versions:
+        - 1.32.0_951dba3fb9f4a24d
+
+anta.tests.services:
+  - VerifyDNSLookup:
+      domain_names:
+        - arista.com
+        - www.google.com
+        - arista.ca
+
+anta.tests.lanz:
+  - VerifyLANZ:
