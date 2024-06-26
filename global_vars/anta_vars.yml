@@ -1,0 +1,5 @@
+# Defaults to false as ANTA is currently in preview
+# use_anta: true
+
+# Save each device test catalog to 'test_catalogs_dir'. Defaults to false.
+# save_catalog: true
