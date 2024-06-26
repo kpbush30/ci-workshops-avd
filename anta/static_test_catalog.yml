@@ -1,6 +1,6 @@
 anta.tests.software:
   - VerifyEOSVersion: # Verifies the device is running one of the allowed EOS version.
-      versions: # List of allowed EOS versions.
+      versions:       # List of allowed EOS versions.
         - 4.32.0F
   - VerifyTerminAttrVersion:
       versions:
