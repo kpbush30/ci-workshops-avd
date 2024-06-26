@@ -1,6 +1,6 @@
 ---
 - name: Build Switch configuration
-  hosts: '{{ target_group }}'
+  hosts: '{{ target_hosts }}'
   connection: local
   gather_facts: false
   tasks:
