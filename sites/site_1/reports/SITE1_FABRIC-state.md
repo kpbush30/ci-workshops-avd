@@ -11,128 +11,153 @@
 
 ### Summary Totals
 
-| Total Tests | Total Tests Passed | Total Tests Failed |
-| ----------- | ------------------ | ------------------ |
-| 92 | 92 | 0 |
+| Total Tests | Total Tests Passed | Total Tests Failed | Total Tests Skipped |
+| ----------- | ------------------ | ------------------ | ------------------- |
+| 116 | 92 | 0 | 24 |
 
-### Summary Totals Devices Under Tests
+### Summary Totals Device Under Test
 
-| DUT | Total Tests | Tests Passed | Tests Failed | Categories Failed |
-| --- | ----------- | ------------ | ------------ | ----------------- |
-| s1-leaf1 |  13 | 13 | 0 | - |
-| s1-leaf2 |  13 | 13 | 0 | - |
-| s1-leaf3 |  13 | 13 | 0 | - |
-| s1-leaf4 |  13 | 13 | 0 | - |
-| s1-spine1 |  20 | 20 | 0 | - |
-| s1-spine2 |  20 | 20 | 0 | - |
+| Device Under Test | Total Tests | Tests Passed | Tests Failed | Tests Skipped | Categories Failed | Categories Skipped |
+| ------------------| ----------- | ------------ | ------------ | ------------- | ----------------- | ------------------ |
+| s1-leaf1 | 17 | 13 | 0 | 4 | - | Hardware |
+| s1-leaf2 | 17 | 13 | 0 | 4 | - | Hardware |
+| s1-leaf3 | 17 | 13 | 0 | 4 | - | Hardware |
+| s1-leaf4 | 17 | 13 | 0 | 4 | - | Hardware |
+| s1-spine1 | 24 | 20 | 0 | 4 | - | Hardware |
+| s1-spine2 | 24 | 20 | 0 | 4 | - | Hardware |
 
 ### Summary Totals Per Category
 
-| Test Category | Total Tests | Tests Passed | Tests Failed |
-| ------------- | ----------- | ------------ | ------------ |
-| NTP |  6 | 6 | 0 |
-| Interface State |  52 | 52 | 0 |
-| LLDP Topology |  28 | 28 | 0 |
-| MLAG |  6 | 6 | 0 |
+| Test Category | Total Tests | Tests Passed | Tests Failed | Tests Skipped |
+| ------------- | ----------- | ------------ | ------------ | ------------- |
+| Connectivity | 28 | 28 | 0 | 0 |
+| Hardware | 24 | 0 | 0 | 24 |
+| Interfaces | 52 | 52 | 0 | 0 |
+| MLAG | 6 | 6 | 0 | 0 |
+| System | 6 | 6 | 0 | 0 |
 
 ## Failed Test Results Summary
 
-| Test ID | Node | Test Category | Test Description | Test | Test Result | Failure Reason |
-| ------- | ---- | ------------- | ---------------- | ---- | ----------- | -------------- |
+| ID | Device Under Test | Categories | Test | Description | Inputs | Result | Messages |
+| -- | ----------------- | ---------- | ---- | ----------- | ------ | -------| -------- |
 
 ## All Test Results
 
-| Test ID | Node | Test Category | Test Description | Test | Test Result | Failure Reason |
-| ------- | ---- | ------------- | ---------------- | ---- | ----------- | -------------- |
-| 1 | s1-leaf1 | NTP | Synchronised with NTP server | NTP | PASS | - |
-| 2 | s1-leaf2 | NTP | Synchronised with NTP server | NTP | PASS | - |
-| 3 | s1-leaf3 | NTP | Synchronised with NTP server | NTP | PASS | - |
-| 4 | s1-leaf4 | NTP | Synchronised with NTP server | NTP | PASS | - |
-| 5 | s1-spine1 | NTP | Synchronised with NTP server | NTP | PASS | - |
-| 6 | s1-spine2 | NTP | Synchronised with NTP server | NTP | PASS | - |
-| 7 | s1-leaf1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_s1-leaf2_Ethernet1 | PASS | - |
-| 8 | s1-leaf1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - MLAG_PEER_s1-leaf2_Ethernet6 | PASS | - |
-| 9 | s1-leaf1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - S1-SPINE1_Ethernet2 | PASS | - |
-| 10 | s1-leaf1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - S1-SPINE2_Ethernet2 | PASS | - |
-| 11 | s1-leaf2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_s1-leaf1_Ethernet1 | PASS | - |
-| 12 | s1-leaf2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - MLAG_PEER_s1-leaf1_Ethernet6 | PASS | - |
-| 13 | s1-leaf2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - S1-SPINE1_Ethernet3 | PASS | - |
-| 14 | s1-leaf2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - S1-SPINE2_Ethernet3 | PASS | - |
-| 15 | s1-leaf3 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_s1-leaf4_Ethernet1 | PASS | - |
-| 16 | s1-leaf3 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - MLAG_PEER_s1-leaf4_Ethernet6 | PASS | - |
-| 17 | s1-leaf3 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - S1-SPINE1_Ethernet4 | PASS | - |
-| 18 | s1-leaf3 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - S1-SPINE2_Ethernet4 | PASS | - |
-| 19 | s1-leaf4 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_s1-leaf3_Ethernet1 | PASS | - |
-| 20 | s1-leaf4 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - MLAG_PEER_s1-leaf3_Ethernet6 | PASS | - |
-| 21 | s1-leaf4 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - S1-SPINE1_Ethernet5 | PASS | - |
-| 22 | s1-leaf4 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - S1-SPINE2_Ethernet5 | PASS | - |
-| 23 | s1-spine1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_s1-spine2_Ethernet1 | PASS | - |
-| 24 | s1-spine1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - MLAG_PEER_s1-spine2_Ethernet6 | PASS | - |
-| 25 | s1-spine1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - S1-LEAF1_Ethernet2 | PASS | - |
-| 26 | s1-spine1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - S1-LEAF2_Ethernet2 | PASS | - |
-| 27 | s1-spine1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - S1-LEAF3_Ethernet2 | PASS | - |
-| 28 | s1-spine1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - S1-LEAF4_Ethernet2 | PASS | - |
-| 29 | s1-spine2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_s1-spine1_Ethernet1 | PASS | - |
-| 30 | s1-spine2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - MLAG_PEER_s1-spine1_Ethernet6 | PASS | - |
-| 31 | s1-spine2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - S1-LEAF1_Ethernet3 | PASS | - |
-| 32 | s1-spine2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - S1-LEAF2_Ethernet3 | PASS | - |
-| 33 | s1-spine2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - S1-LEAF3_Ethernet3 | PASS | - |
-| 34 | s1-spine2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - S1-LEAF4_Ethernet3 | PASS | - |
-| 35 | s1-leaf1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_s1-leaf2_Po1 | PASS | - |
-| 36 | s1-leaf1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel2 - SPINES_Po2 | PASS | - |
-| 37 | s1-leaf2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_s1-leaf1_Po1 | PASS | - |
-| 38 | s1-leaf2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel2 - SPINES_Po2 | PASS | - |
-| 39 | s1-leaf3 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_s1-leaf4_Po1 | PASS | - |
-| 40 | s1-leaf3 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel2 - SPINES_Po4 | PASS | - |
-| 41 | s1-leaf4 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_s1-leaf3_Po1 | PASS | - |
-| 42 | s1-leaf4 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel2 - SPINES_Po4 | PASS | - |
-| 43 | s1-spine1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_s1-spine2_Po1 | PASS | - |
-| 44 | s1-spine1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel2 - RACK1_Po2 | PASS | - |
-| 45 | s1-spine1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel4 - RACK2_Po2 | PASS | - |
-| 46 | s1-spine2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_s1-spine1_Po1 | PASS | - |
-| 47 | s1-spine2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel2 - RACK1_Po2 | PASS | - |
-| 48 | s1-spine2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel4 - RACK2_Po2 | PASS | - |
-| 49 | s1-leaf1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
-| 50 | s1-leaf2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
-| 51 | s1-leaf3 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
-| 52 | s1-leaf4 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
-| 53 | s1-spine1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
-| 54 | s1-spine1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
-| 55 | s1-spine2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
-| 56 | s1-spine2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
-| 57 | s1-spine1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - Router_ID | PASS | - |
-| 58 | s1-spine2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - Router_ID | PASS | - |
-| 59 | s1-leaf1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: s1-leaf2_Ethernet1 | PASS | - |
-| 60 | s1-leaf1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: s1-leaf2_Ethernet6 | PASS | - |
-| 61 | s1-leaf1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: s1-spine1_Ethernet2 | PASS | - |
-| 62 | s1-leaf1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: s1-spine2_Ethernet2 | PASS | - |
-| 63 | s1-leaf2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: s1-leaf1_Ethernet1 | PASS | - |
-| 64 | s1-leaf2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: s1-leaf1_Ethernet6 | PASS | - |
-| 65 | s1-leaf2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: s1-spine1_Ethernet3 | PASS | - |
-| 66 | s1-leaf2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: s1-spine2_Ethernet3 | PASS | - |
-| 67 | s1-leaf3 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: s1-leaf4_Ethernet1 | PASS | - |
-| 68 | s1-leaf3 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: s1-leaf4_Ethernet6 | PASS | - |
-| 69 | s1-leaf3 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: s1-spine1_Ethernet4 | PASS | - |
-| 70 | s1-leaf3 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: s1-spine2_Ethernet4 | PASS | - |
-| 71 | s1-leaf4 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: s1-leaf3_Ethernet1 | PASS | - |
-| 72 | s1-leaf4 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: s1-leaf3_Ethernet6 | PASS | - |
-| 73 | s1-leaf4 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: s1-spine1_Ethernet5 | PASS | - |
-| 74 | s1-leaf4 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: s1-spine2_Ethernet5 | PASS | - |
-| 75 | s1-spine1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: s1-spine2_Ethernet1 | PASS | - |
-| 76 | s1-spine1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: s1-spine2_Ethernet6 | PASS | - |
-| 77 | s1-spine1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: s1-leaf1_Ethernet2 | PASS | - |
-| 78 | s1-spine1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: s1-leaf2_Ethernet2 | PASS | - |
-| 79 | s1-spine1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: s1-leaf3_Ethernet2 | PASS | - |
-| 80 | s1-spine1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: s1-leaf4_Ethernet2 | PASS | - |
-| 81 | s1-spine2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: s1-spine1_Ethernet1 | PASS | - |
-| 82 | s1-spine2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: s1-spine1_Ethernet6 | PASS | - |
-| 83 | s1-spine2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: s1-leaf1_Ethernet3 | PASS | - |
-| 84 | s1-spine2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: s1-leaf2_Ethernet3 | PASS | - |
-| 85 | s1-spine2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: s1-leaf3_Ethernet3 | PASS | - |
-| 86 | s1-spine2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: s1-leaf4_Ethernet3 | PASS | - |
-| 87 | s1-leaf1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
-| 88 | s1-leaf2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
-| 89 | s1-leaf3 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
-| 90 | s1-leaf4 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
-| 91 | s1-spine1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
-| 92 | s1-spine2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| ID | Device Under Test | Categories | Test | Description | Inputs | Result | Messages |
+| -- | ----------------- | ---------- | ---- | ----------- | ------ | -------| -------- |
+| 1 | s1-leaf1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet1 - Remote: s1-leaf2 Ethernet1 | PASS | - |
+| 2 | s1-leaf1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet2 - Remote: s1-spine1 Ethernet2 | PASS | - |
+| 3 | s1-leaf1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet3 - Remote: s1-spine2 Ethernet2 | PASS | - |
+| 4 | s1-leaf1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet6 - Remote: s1-leaf2 Ethernet6 | PASS | - |
+| 5 | s1-leaf1 | Hardware | VerifyEnvironmentCooling | Verifies the status of power supply fans and all fan trays. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentCooling test is not supported on cEOSLab. |
+| 6 | s1-leaf1 | Hardware | VerifyEnvironmentPower | Verifies the power supplies status. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentPower test is not supported on cEOSLab. |
+| 7 | s1-leaf1 | Hardware | VerifyTemperature | Verifies the device temperature. | - | SKIPPED | VerifyTemperature test is not supported on cEOSLab. |
+| 8 | s1-leaf1 | Hardware | VerifyTransceiversManufacturers | Verifies if all transceivers come from approved manufacturers. | Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present' | SKIPPED | VerifyTransceiversManufacturers test is not supported on cEOSLab. |
+| 9 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet1 - MLAG_PEER_s1-leaf2_Ethernet1 = 'up' | PASS | - |
+| 10 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet2 - S1-SPINE1_Ethernet2 = 'up' | PASS | - |
+| 11 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet3 - S1-SPINE2_Ethernet2 = 'up' | PASS | - |
+| 12 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet6 - MLAG_PEER_s1-leaf2_Ethernet6 = 'up' | PASS | - |
+| 13 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel1 - MLAG_PEER_s1-leaf2_Po1 = 'up' | PASS | - |
+| 14 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel2 - SPINES_Po2 = 'up' | PASS | - |
+| 15 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
+| 16 | s1-leaf1 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
+| 17 | s1-leaf1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 18 | s1-leaf2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet1 - Remote: s1-leaf1 Ethernet1 | PASS | - |
+| 19 | s1-leaf2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet2 - Remote: s1-spine1 Ethernet3 | PASS | - |
+| 20 | s1-leaf2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet3 - Remote: s1-spine2 Ethernet3 | PASS | - |
+| 21 | s1-leaf2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet6 - Remote: s1-leaf1 Ethernet6 | PASS | - |
+| 22 | s1-leaf2 | Hardware | VerifyEnvironmentCooling | Verifies the status of power supply fans and all fan trays. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentCooling test is not supported on cEOSLab. |
+| 23 | s1-leaf2 | Hardware | VerifyEnvironmentPower | Verifies the power supplies status. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentPower test is not supported on cEOSLab. |
+| 24 | s1-leaf2 | Hardware | VerifyTemperature | Verifies the device temperature. | - | SKIPPED | VerifyTemperature test is not supported on cEOSLab. |
+| 25 | s1-leaf2 | Hardware | VerifyTransceiversManufacturers | Verifies if all transceivers come from approved manufacturers. | Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present' | SKIPPED | VerifyTransceiversManufacturers test is not supported on cEOSLab. |
+| 26 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet1 - MLAG_PEER_s1-leaf1_Ethernet1 = 'up' | PASS | - |
+| 27 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet2 - S1-SPINE1_Ethernet3 = 'up' | PASS | - |
+| 28 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet3 - S1-SPINE2_Ethernet3 = 'up' | PASS | - |
+| 29 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet6 - MLAG_PEER_s1-leaf1_Ethernet6 = 'up' | PASS | - |
+| 30 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel1 - MLAG_PEER_s1-leaf1_Po1 = 'up' | PASS | - |
+| 31 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel2 - SPINES_Po2 = 'up' | PASS | - |
+| 32 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
+| 33 | s1-leaf2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
+| 34 | s1-leaf2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 35 | s1-leaf3 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet1 - Remote: s1-leaf4 Ethernet1 | PASS | - |
+| 36 | s1-leaf3 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet2 - Remote: s1-spine1 Ethernet4 | PASS | - |
+| 37 | s1-leaf3 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet3 - Remote: s1-spine2 Ethernet4 | PASS | - |
+| 38 | s1-leaf3 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet6 - Remote: s1-leaf4 Ethernet6 | PASS | - |
+| 39 | s1-leaf3 | Hardware | VerifyEnvironmentCooling | Verifies the status of power supply fans and all fan trays. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentCooling test is not supported on cEOSLab. |
+| 40 | s1-leaf3 | Hardware | VerifyEnvironmentPower | Verifies the power supplies status. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentPower test is not supported on cEOSLab. |
+| 41 | s1-leaf3 | Hardware | VerifyTemperature | Verifies the device temperature. | - | SKIPPED | VerifyTemperature test is not supported on cEOSLab. |
+| 42 | s1-leaf3 | Hardware | VerifyTransceiversManufacturers | Verifies if all transceivers come from approved manufacturers. | Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present' | SKIPPED | VerifyTransceiversManufacturers test is not supported on cEOSLab. |
+| 43 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet1 - MLAG_PEER_s1-leaf4_Ethernet1 = 'up' | PASS | - |
+| 44 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet2 - S1-SPINE1_Ethernet4 = 'up' | PASS | - |
+| 45 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet3 - S1-SPINE2_Ethernet4 = 'up' | PASS | - |
+| 46 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet6 - MLAG_PEER_s1-leaf4_Ethernet6 = 'up' | PASS | - |
+| 47 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel1 - MLAG_PEER_s1-leaf4_Po1 = 'up' | PASS | - |
+| 48 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel2 - SPINES_Po4 = 'up' | PASS | - |
+| 49 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
+| 50 | s1-leaf3 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
+| 51 | s1-leaf3 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 52 | s1-leaf4 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet1 - Remote: s1-leaf3 Ethernet1 | PASS | - |
+| 53 | s1-leaf4 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet2 - Remote: s1-spine1 Ethernet5 | PASS | - |
+| 54 | s1-leaf4 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet3 - Remote: s1-spine2 Ethernet5 | PASS | - |
+| 55 | s1-leaf4 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet6 - Remote: s1-leaf3 Ethernet6 | PASS | - |
+| 56 | s1-leaf4 | Hardware | VerifyEnvironmentCooling | Verifies the status of power supply fans and all fan trays. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentCooling test is not supported on cEOSLab. |
+| 57 | s1-leaf4 | Hardware | VerifyEnvironmentPower | Verifies the power supplies status. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentPower test is not supported on cEOSLab. |
+| 58 | s1-leaf4 | Hardware | VerifyTemperature | Verifies the device temperature. | - | SKIPPED | VerifyTemperature test is not supported on cEOSLab. |
+| 59 | s1-leaf4 | Hardware | VerifyTransceiversManufacturers | Verifies if all transceivers come from approved manufacturers. | Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present' | SKIPPED | VerifyTransceiversManufacturers test is not supported on cEOSLab. |
+| 60 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet1 - MLAG_PEER_s1-leaf3_Ethernet1 = 'up' | PASS | - |
+| 61 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet2 - S1-SPINE1_Ethernet5 = 'up' | PASS | - |
+| 62 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet3 - S1-SPINE2_Ethernet5 = 'up' | PASS | - |
+| 63 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet6 - MLAG_PEER_s1-leaf3_Ethernet6 = 'up' | PASS | - |
+| 64 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel1 - MLAG_PEER_s1-leaf3_Po1 = 'up' | PASS | - |
+| 65 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel2 - SPINES_Po4 = 'up' | PASS | - |
+| 66 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
+| 67 | s1-leaf4 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
+| 68 | s1-leaf4 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 69 | s1-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet1 - Remote: s1-spine2 Ethernet1 | PASS | - |
+| 70 | s1-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet2 - Remote: s1-leaf1 Ethernet2 | PASS | - |
+| 71 | s1-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet3 - Remote: s1-leaf2 Ethernet2 | PASS | - |
+| 72 | s1-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet4 - Remote: s1-leaf3 Ethernet2 | PASS | - |
+| 73 | s1-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet5 - Remote: s1-leaf4 Ethernet2 | PASS | - |
+| 74 | s1-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet6 - Remote: s1-spine2 Ethernet6 | PASS | - |
+| 75 | s1-spine1 | Hardware | VerifyEnvironmentCooling | Verifies the status of power supply fans and all fan trays. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentCooling test is not supported on cEOSLab. |
+| 76 | s1-spine1 | Hardware | VerifyEnvironmentPower | Verifies the power supplies status. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentPower test is not supported on cEOSLab. |
+| 77 | s1-spine1 | Hardware | VerifyTemperature | Verifies the device temperature. | - | SKIPPED | VerifyTemperature test is not supported on cEOSLab. |
+| 78 | s1-spine1 | Hardware | VerifyTransceiversManufacturers | Verifies if all transceivers come from approved manufacturers. | Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present' | SKIPPED | VerifyTransceiversManufacturers test is not supported on cEOSLab. |
+| 79 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet1 - MLAG_PEER_s1-spine2_Ethernet1 = 'up' | PASS | - |
+| 80 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet2 - S1-LEAF1_Ethernet2 = 'up' | PASS | - |
+| 81 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet3 - S1-LEAF2_Ethernet2 = 'up' | PASS | - |
+| 82 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet4 - S1-LEAF3_Ethernet2 = 'up' | PASS | - |
+| 83 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet5 - S1-LEAF4_Ethernet2 = 'up' | PASS | - |
+| 84 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet6 - MLAG_PEER_s1-spine2_Ethernet6 = 'up' | PASS | - |
+| 85 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Loopback0 - Router_ID = 'up' | PASS | - |
+| 86 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel1 - MLAG_PEER_s1-spine2_Po1 = 'up' | PASS | - |
+| 87 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel2 - RACK1_Po2 = 'up' | PASS | - |
+| 88 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel4 - RACK2_Po2 = 'up' | PASS | - |
+| 89 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4093 - MLAG_PEER_L3_PEERING = 'up' | PASS | - |
+| 90 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
+| 91 | s1-spine1 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
+| 92 | s1-spine1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 93 | s1-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet1 - Remote: s1-spine1 Ethernet1 | PASS | - |
+| 94 | s1-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet2 - Remote: s1-leaf1 Ethernet3 | PASS | - |
+| 95 | s1-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet3 - Remote: s1-leaf2 Ethernet3 | PASS | - |
+| 96 | s1-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet4 - Remote: s1-leaf3 Ethernet3 | PASS | - |
+| 97 | s1-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet5 - Remote: s1-leaf4 Ethernet3 | PASS | - |
+| 98 | s1-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies that the provided LLDP neighbors are connected properly. | Local: Ethernet6 - Remote: s1-spine1 Ethernet6 | PASS | - |
+| 99 | s1-spine2 | Hardware | VerifyEnvironmentCooling | Verifies the status of power supply fans and all fan trays. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentCooling test is not supported on cEOSLab. |
+| 100 | s1-spine2 | Hardware | VerifyEnvironmentPower | Verifies the power supplies status. | Accepted States: 'ok' | SKIPPED | VerifyEnvironmentPower test is not supported on cEOSLab. |
+| 101 | s1-spine2 | Hardware | VerifyTemperature | Verifies the device temperature. | - | SKIPPED | VerifyTemperature test is not supported on cEOSLab. |
+| 102 | s1-spine2 | Hardware | VerifyTransceiversManufacturers | Verifies if all transceivers come from approved manufacturers. | Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present' | SKIPPED | VerifyTransceiversManufacturers test is not supported on cEOSLab. |
+| 103 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet1 - MLAG_PEER_s1-spine1_Ethernet1 = 'up' | PASS | - |
+| 104 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet2 - S1-LEAF1_Ethernet3 = 'up' | PASS | - |
+| 105 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet3 - S1-LEAF2_Ethernet3 = 'up' | PASS | - |
+| 106 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet4 - S1-LEAF3_Ethernet3 = 'up' | PASS | - |
+| 107 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet5 - S1-LEAF4_Ethernet3 = 'up' | PASS | - |
+| 108 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Ethernet6 - MLAG_PEER_s1-spine1_Ethernet6 = 'up' | PASS | - |
+| 109 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Loopback0 - Router_ID = 'up' | PASS | - |
+| 110 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel1 - MLAG_PEER_s1-spine1_Po1 = 'up' | PASS | - |
+| 111 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel2 - RACK1_Po2 = 'up' | PASS | - |
+| 112 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Port-Channel4 - RACK2_Po2 = 'up' | PASS | - |
+| 113 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4093 - MLAG_PEER_L3_PEERING = 'up' | PASS | - |
+| 114 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
+| 115 | s1-spine2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
+| 116 | s1-spine2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
