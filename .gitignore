@@ -1,3 +1,8 @@
+# AVD Ignore
+config_backup/
+documentation/
+intended/
+
 .vscode/
 .DS_store
 # Byte-compiled / optimized / DLL files
