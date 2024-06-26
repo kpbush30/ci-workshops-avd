@@ -11,3 +11,4 @@ deepmerge>=1.1.0
 cryptography>=38.0.4
 referencing>=0.35.0
 aristaproto>=0.1.1
+anta==0.14.0
