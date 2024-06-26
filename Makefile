@@ -18,6 +18,10 @@ build-site-1: ## Build Configs
 deploy-site-1: ## Deploy Configs via eAPI
 	ansible-playbook playbooks/deploy.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
 
+.PHONY: validate-site-1
+validate-site-1: ## Validate network state
+	ansible-playbook playbooks/validate.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
+
 .PHONY: cvp-site-1
 cvp-site-1: ## Deploy Configs via CloudVision (eos_config_deploy_cvp)
 	ansible-playbook playbooks/cvp1.yml -i sites/site_1/inventory.yml
@@ -42,13 +46,17 @@ build-site-2: ## Build Configs
 deploy-site-2: ## Deploy Configs via eAPI
 	ansible-playbook playbooks/deploy.yml -i sites/site_2/inventory.yml -e "target_hosts=SITE2_FABRIC"
 
+.PHONY: validate-site-2
+validate-site-2: ## Validate network state
+	ansible-playbook playbooks/validate.yml -i sites/site_2/inventory.yml -e "target_hosts=SITE2_FABRIC"
+
 .PHONY: cvp-site-2
 cvp-site-2: ## Deploy Configs via CloudVision
 	ansible-playbook playbooks/cvp2.yml -i sites/site_2/inventory.yml
 
 .PHONY: cvdeploy-site-2
 cvdeploy-site-2: ## Deploy Configs via CloudVision (cv_deploy)
-	ansible-playbook playbooks/cv_deploy.yml -i sites/site_2/inventory.yml -e "target_hosts=SITE2q_FABRIC"
+	ansible-playbook playbooks/cv_deploy.yml -i sites/site_2/inventory.yml -e "target_hosts=SITE2_FABRIC"
 
 
 ########################################################
@@ -58,3 +66,18 @@ cvdeploy-site-2: ## Deploy Configs via CloudVision (cv_deploy)
 .PHONY: preplab
 preplab: ## Deploy Configs via eAPI
 	ansible-playbook playbooks/preplab.yml -i extra_configs/inventory.yml -e "target_hosts=LAB"
+
+
+########################################################
+# ANTA COMMANDS
+########################################################
+
+
+.PHONY: anta-inv-site-1
+anta-inv-site-1: ## Generate ANTA Inventory
+	anta get from-ansible --ansible-inventory sites/site_1/inventory.yml -g SITE1_FABRIC -o sites/site_1/anta_inventory.yml
+
+.PHONY: anta-inv-site-2
+anta-inv-site-2: ## Generate ANTA Inventory
+	anta get from-ansible --ansible-inventory sites/site_2/inventory.yml -g SITE2_FABRIC -o sites/site_2/anta_inventory.yml
+
