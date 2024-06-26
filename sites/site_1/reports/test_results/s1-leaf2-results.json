@@ -183,14 +183,14 @@
   },
   {
     "name": "s1-leaf2",
-    "test": "VerifyDNSLookup",
+    "test": "VerifyRoutingTableEntry",
     "categories": [
-      "services"
+      "routing"
     ],
-    "description": "Verifies the DNS name to IP address resolution.",
-    "result": "error",
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "failure",
     "messages": [
-      "ValueError: \"AntaCommand\" object has no field \"failed\""
+      "The following route(s) are missing from the routing table of VRF default: ['9.9.9.9']"
     ]
   },
   {

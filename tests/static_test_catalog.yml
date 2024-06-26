@@ -10,6 +10,25 @@ anta.tests.software:
       versions:       # List of allowed TerminAttr versions.
         - v1.32.0
 
+anta.tests.system:
+  - VerifyCPUUtilization:
+  - VerifyReloadCause:
+  - VerifyCoredump:
+  - VerifyAgentLogs:
+  - VerifyCPUUtilization:
+  - VerifyMemoryUtilization:
+  - VerifyFileSystemUtilization:
+  - VerifyNTP:
+
+anta.tests.hardware:
+  - VerifyEnvironmentCooling: 
+      states: ['ok']
+  - VerifyEnvironmentPower:
+      states: ['ok']
+  - VerifyEnvironmentSystemCooling:
+  - VerifyTemperature:
+ 
+
 # Verifies the device has certain route in routing table
 anta.tests.routing:
   generic:

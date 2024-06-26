@@ -19,12 +19,12 @@
 
 | Device Under Test | Total Tests | Tests Passed | Tests Failed | Tests Skipped | Categories Failed | Categories Skipped |
 | ------------------| ----------- | ------------ | ------------ | ------------- | ----------------- | ------------------ |
-| s1-leaf1 | 21 | 15 | 1 | 5 | Services | Hardware, LANZ |
-| s1-leaf2 | 21 | 15 | 1 | 5 | Services | Hardware, LANZ |
-| s1-leaf3 | 21 | 15 | 1 | 5 | Services | Hardware, LANZ |
-| s1-leaf4 | 21 | 15 | 1 | 5 | Services | Hardware, LANZ |
-| s1-spine1 | 30 | 24 | 1 | 5 | Services | Hardware, LANZ |
-| s1-spine2 | 30 | 24 | 1 | 5 | Services | Hardware, LANZ |
+| s1-leaf1 | 21 | 15 | 1 | 5 | Routing | Hardware, LANZ |
+| s1-leaf2 | 21 | 15 | 1 | 5 | Routing | Hardware, LANZ |
+| s1-leaf3 | 21 | 15 | 1 | 5 | Routing | Hardware, LANZ |
+| s1-leaf4 | 21 | 15 | 1 | 5 | Routing | Hardware, LANZ |
+| s1-spine1 | 30 | 24 | 1 | 5 | Routing | Hardware, LANZ |
+| s1-spine2 | 30 | 24 | 1 | 5 | Routing | Hardware, LANZ |
 
 ### Summary Totals Per Category
 
@@ -35,7 +35,7 @@
 | Interfaces | 56 | 56 | 0 | 0 |
 | LANZ | 6 | 0 | 0 | 6 |
 | MLAG | 6 | 6 | 0 | 0 |
-| Services | 6 | 0 | 6 | 0 |
+| Routing | 6 | 0 | 6 | 0 |
 | Software | 12 | 12 | 0 | 0 |
 | System | 6 | 6 | 0 | 0 |
 
@@ -43,12 +43,12 @@
 
 | ID | Device Under Test | Categories | Test | Description | Inputs | Result | Messages |
 | -- | ----------------- | ---------- | ---- | ----------- | ------ | -------| -------- |
-| 18 | s1-leaf1 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
-| 39 | s1-leaf2 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
-| 60 | s1-leaf3 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
-| 81 | s1-leaf4 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
-| 111 | s1-spine1 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
-| 141 | s1-spine2 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 18 | s1-leaf1 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
+| 39 | s1-leaf2 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
+| 60 | s1-leaf3 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
+| 81 | s1-leaf4 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
+| 111 | s1-spine1 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
+| 141 | s1-spine2 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 
 ## All Test Results
 
@@ -71,7 +71,7 @@
 | 15 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
 | 16 | s1-leaf1 | LANZ | VerifyLANZ | Verifies if LANZ is enabled. | - | SKIPPED | VerifyLANZ test is not supported on cEOSLab. |
 | 17 | s1-leaf1 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 18 | s1-leaf1 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 18 | s1-leaf1 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 | 19 | s1-leaf1 | Software | VerifyEOSVersion | Verifies the EOS version of the device. | - | PASS | - |
 | 20 | s1-leaf1 | Software | VerifyTerminAttrVersion | Verifies the TerminAttr version of the device. | - | PASS | - |
 | 21 | s1-leaf1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -92,7 +92,7 @@
 | 36 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
 | 37 | s1-leaf2 | LANZ | VerifyLANZ | Verifies if LANZ is enabled. | - | SKIPPED | VerifyLANZ test is not supported on cEOSLab. |
 | 38 | s1-leaf2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 39 | s1-leaf2 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 39 | s1-leaf2 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 | 40 | s1-leaf2 | Software | VerifyEOSVersion | Verifies the EOS version of the device. | - | PASS | - |
 | 41 | s1-leaf2 | Software | VerifyTerminAttrVersion | Verifies the TerminAttr version of the device. | - | PASS | - |
 | 42 | s1-leaf2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -113,7 +113,7 @@
 | 57 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
 | 58 | s1-leaf3 | LANZ | VerifyLANZ | Verifies if LANZ is enabled. | - | SKIPPED | VerifyLANZ test is not supported on cEOSLab. |
 | 59 | s1-leaf3 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 60 | s1-leaf3 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 60 | s1-leaf3 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 | 61 | s1-leaf3 | Software | VerifyEOSVersion | Verifies the EOS version of the device. | - | PASS | - |
 | 62 | s1-leaf3 | Software | VerifyTerminAttrVersion | Verifies the TerminAttr version of the device. | - | PASS | - |
 | 63 | s1-leaf3 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -134,7 +134,7 @@
 | 78 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
 | 79 | s1-leaf4 | LANZ | VerifyLANZ | Verifies if LANZ is enabled. | - | SKIPPED | VerifyLANZ test is not supported on cEOSLab. |
 | 80 | s1-leaf4 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 81 | s1-leaf4 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 81 | s1-leaf4 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 | 82 | s1-leaf4 | Software | VerifyEOSVersion | Verifies the EOS version of the device. | - | PASS | - |
 | 83 | s1-leaf4 | Software | VerifyTerminAttrVersion | Verifies the TerminAttr version of the device. | - | PASS | - |
 | 84 | s1-leaf4 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -164,7 +164,7 @@
 | 108 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
 | 109 | s1-spine1 | LANZ | VerifyLANZ | Verifies if LANZ is enabled. | - | SKIPPED | VerifyLANZ test is not supported on cEOSLab. |
 | 110 | s1-spine1 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 111 | s1-spine1 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 111 | s1-spine1 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 | 112 | s1-spine1 | Software | VerifyEOSVersion | Verifies the EOS version of the device. | - | PASS | - |
 | 113 | s1-spine1 | Software | VerifyTerminAttrVersion | Verifies the TerminAttr version of the device. | - | PASS | - |
 | 114 | s1-spine1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -194,7 +194,7 @@
 | 138 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the status of the provided interfaces. | Interface Vlan4094 - MLAG_PEER = 'up' | PASS | - |
 | 139 | s1-spine2 | LANZ | VerifyLANZ | Verifies if LANZ is enabled. | - | SKIPPED | VerifyLANZ test is not supported on cEOSLab. |
 | 140 | s1-spine2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 141 | s1-spine2 | Services | VerifyDNSLookup | Verifies the DNS name to IP address resolution. | - | FAIL | ValueError: "AntaCommand" object has no field "failed" |
+| 141 | s1-spine2 | Routing | VerifyRoutingTableEntry | Verifies that the provided routes are present in the routing table of a specified VRF. | - | FAIL | The following route(s) are missing from the routing table of VRF default: ['9.9.9.9'] |
 | 142 | s1-spine2 | Software | VerifyEOSVersion | Verifies the EOS version of the device. | - | PASS | - |
 | 143 | s1-spine2 | Software | VerifyTerminAttrVersion | Verifies the TerminAttr version of the device. | - | PASS | - |
 | 144 | s1-spine2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
