@@ -252,11 +252,53 @@
   },
   {
     "name": "s1-spine2",
+    "test": "VerifyLANZ",
+    "categories": [
+      "lanz"
+    ],
+    "description": "Verifies if LANZ is enabled.",
+    "result": "skipped",
+    "messages": [
+      "VerifyLANZ test is not supported on cEOSLab."
+    ]
+  },
+  {
+    "name": "s1-spine2",
     "test": "VerifyMlagStatus",
     "categories": [
       "mlag"
     ],
     "description": "Verifies the health status of the MLAG configuration.",
+    "result": "success"
+  },
+  {
+    "name": "s1-spine2",
+    "test": "VerifyDNSLookup",
+    "categories": [
+      "services"
+    ],
+    "description": "Verifies the DNS name to IP address resolution.",
+    "result": "error",
+    "messages": [
+      "ValueError: \"AntaCommand\" object has no field \"failed\""
+    ]
+  },
+  {
+    "name": "s1-spine2",
+    "test": "VerifyEOSVersion",
+    "categories": [
+      "software"
+    ],
+    "description": "Verifies the EOS version of the device.",
+    "result": "success"
+  },
+  {
+    "name": "s1-spine2",
+    "test": "VerifyTerminAttrVersion",
+    "categories": [
+      "software"
+    ],
+    "description": "Verifies the TerminAttr version of the device.",
     "result": "success"
   },
   {
