@@ -2,6 +2,7 @@
 config_backup/
 documentation/
 intended/
+reports/
 
 .vscode/
 .DS_store
