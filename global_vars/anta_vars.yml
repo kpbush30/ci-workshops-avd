@@ -2,4 +2,4 @@
 # use_anta: true
 
 # Save each device test catalog to 'test_catalogs_dir'. Defaults to false.
-# save_catalog: true
+save_catalog: true
