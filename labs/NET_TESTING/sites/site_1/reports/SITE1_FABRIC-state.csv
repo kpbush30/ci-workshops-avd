@@ -1,0 +1,9 @@
+test_id,node,test_category,test_description,test,result,failure_reason
+1,s1-brdr1,NTP,Synchronised with NTP server,NTP,PASS,
+2,s1-brdr2,NTP,Synchronised with NTP server,NTP,PASS,
+3,s1-leaf1,NTP,Synchronised with NTP server,NTP,PASS,
+4,s1-leaf2,NTP,Synchronised with NTP server,NTP,PASS,
+5,s1-leaf3,NTP,Synchronised with NTP server,NTP,PASS,
+6,s1-leaf4,NTP,Synchronised with NTP server,NTP,PASS,
+7,s1-spine1,NTP,Synchronised with NTP server,NTP,PASS,
+8,s1-spine2,NTP,Synchronised with NTP server,NTP,PASS,

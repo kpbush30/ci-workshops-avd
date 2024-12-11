@@ -14,6 +14,10 @@ ping-site-1: ## Ping Nodes
 build-site-1: ## Build Configs
 	ansible-playbook playbooks/build.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
 
+.PHONY: deploy-site-lab1
+deploy-site-lab1: ## Deploy Configs via eAPI
+	ansible-playbook playbooks/deploy.yml -i sites/site_1/lab.yml -e "target_hosts=LAB1" --limit "leaf1"
+
 .PHONY: deploy-site-1
 deploy-site-1: ## Deploy Configs via eAPI
 	ansible-playbook playbooks/deploy.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
