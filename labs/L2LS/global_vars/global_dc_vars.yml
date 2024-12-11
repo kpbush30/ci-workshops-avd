@@ -67,7 +67,7 @@ cv_collection: v3
 execute_tasks: true
 
 # Login Banner
-# banners:
-#   motd: |
-#     You shall not pass. Unless you are authorized. Then you shall pass.
-#     EOF
+banners:
+  motd: |
+    You shall not pass. Unless you are authorized. Then you shall pass.
+    EOF
