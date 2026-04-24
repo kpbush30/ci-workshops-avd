@@ -96,6 +96,14 @@ l3_edge:
       interfaces: [ Ethernet5, Ethernet5 ]
       profile: S1_to_S2_profile
 
+# Syslog - Kyle added this 4/24
+logging_settings:
+  hosts:
+    - name: 10.200.0.108
+    - name: 10.200.1.108
+  vrfs:
+    - name: default
+
 # Login Banner
 custom_structured_configuration_banners:
   motd: |
