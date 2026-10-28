@@ -85,6 +85,11 @@ bgp_peer_groups:
   mlag_ipv4_underlay_peer:
     password: 4b21pAdCvWeAqpcKDFMdWw==
 
+custom_structured_configuration_banners:
+  motd: |
+    You shall not pass. Unless you are authorized. Then you shall pass.
+    EOF
+
 # L3 Edge port definitions. This can be any port in the entire Fabric, where IP interfaces are defined.
 l3_edge:
   # Define a new IP pool that will be used to assign IP addresses to L3 Edge interfaces.
